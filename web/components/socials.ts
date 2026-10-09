@@ -6,15 +6,27 @@ export function initSocials() {
   const socials = `
     <ul class="socials">
       <li>
+        <a href="https://github.com/schokolalaa" target="_blank">
+          <img src="${githubIcon}"/>
+          <span>My GitHub</span>
+        </a>
+      </li>
+      <li>
         <a href="https://github.com/evastarlight" target="_blank">
           <img src="${githubIcon}"/>
-          <span>GitHub</span>
+          <span>Evas GitHub</span>
+        </a>
+      </li>
+      <li>
+        <a href="mailto:isha@tutanota.de" target="_blank">
+        <img src="${emailIcon}"/>
+        <span>My Email</span>
         </a>
       </li>
       <li>
         <a href="mailto:hi@eva.pink" target="_blank">
         <img src="${emailIcon}"/>
-        <span>Email</span>
+        <span>Evas Email</span>
         </a>
       </li>
     </ul>
