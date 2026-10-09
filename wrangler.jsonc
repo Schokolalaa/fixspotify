@@ -1,46 +1,94 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "fixspotify",
-  "main": "worker/index.ts",
-  "compatibility_date": "2026-08-01",
-  "observability": {
-    "logs": { "enabled": true, "head_sampling_rate": 1, "invocation_logs": true, "persist": true },
-    "traces": { "enabled": true, "head_sampling_rate": 1, "persist": true }
-  },
-  // run near spotify api
-  "placement": { "mode": "smart" },
-  "assets": {
-    "directory": "./dist/web",
-    "binding": "ASSETS",
-    "html_handling": "none",
-    "not_found_handling": "none",
-    // /_/ and robots.txt from assets, rest hits the worker
-    "run_worker_first": ["/*", "!/_/*", "!/robots.txt"]
-  },
-  "images": { "binding": "IMAGES" },
-  "rules": [{ "type": "Text", "globs": ["**/*.html"], "fallthrough": true }],
-  "kv_namespaces": [
-    {
-      "binding": "TOKENS",
-      // pnpm wrangler kv namespace create TOKENS
-      "id": "a6fe5b3489fb440e88415531c8b8731a"
-    }
-  ],
-  "durable_objects": {
-    "bindings": [{ "name": "STATS", "class_name": "Stats" }]
-  },
-  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Stats"] }],
-  // embed fetches per ip per minute that still count towards stats
-  "ratelimits": [
-    { "name": "EMBED_LIMITER", "namespace_id": "1001", "simple": { "limit": 300, "period": 60 } }
-  ],
- "vars": {
-  "MAIN_HOST": "schokolala.cc",
-  "OPEN_HOST": "open.schokolala.cc",
-  "LINK_HOST": "fixspotify.link",  
-  "STATS_SAMPLE_RATE": "1"
-},
-  "routes": [
-    { "pattern": "open.schokolala.cc", "custom_domain": true }
-  ]
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "fixspotify",
+	"main": "worker/index.ts",
+	"compatibility_date": "2026-08-01",
+	"observability": {
+		"logs": {
+			"enabled": true,
+			"head_sampling_rate": 1,
+			"invocation_logs": true,
+			"persist": true
+		},
+		"traces": {
+			"enabled": true,
+			"head_sampling_rate": 1,
+			"persist": true
+		}
+	},
+	// run near spotify api
+	"placement": {
+		"mode": "smart"
+	},
+	"assets": {
+		"directory": "./dist/web",
+		"binding": "ASSETS",
+		"html_handling": "none",
+		"not_found_handling": "none",
+		// /_/ and robots.txt from assets, rest hits the worker
+		"run_worker_first": [
+			"/*",
+			"!/_/*",
+			"!/robots.txt"
+		]
+	},
+	"images": {
+		"binding": "IMAGES"
+	},
+	"rules": [
+		{
+			"type": "Text",
+			"globs": [
+				"**/*.html"
+			],
+			"fallthrough": true
+		}
+	],
+	"kv_namespaces": [
+		{
+			"binding": "TOKENS",
+			// pnpm wrangler kv namespace create TOKENS
+			"id": "8212e8d75a914b76a59f6b6a7d6f573f",
+			"remote": true
+		}
+	],
+	"durable_objects": {
+		"bindings": [
+			{
+				"name": "STATS",
+				"class_name": "Stats"
+			}
+		]
+	},
+	"migrations": [
+		{
+			"tag": "v1",
+			"new_sqlite_classes": [
+				"Stats"
+			]
+		}
+	],
+	// embed fetches per ip per minute that still count towards stats
+	"ratelimits": [
+		{
+			"name": "EMBED_LIMITER",
+			"namespace_id": "1001",
+			"simple": {
+				"limit": 300,
+				"period": 60
+			}
+		}
+	],
+	"vars": {
+		"MAIN_HOST": "schokolala.cc",
+		"OPEN_HOST": "open.schokolala.cc",
+		"LINK_HOST": "fixspotify.link",
+		"STATS_SAMPLE_RATE": "1"
+	},
+	"routes": [
+		{
+			"pattern": "open.schokolala.cc",
+			"custom_domain": true
+		}
+	]
 }
