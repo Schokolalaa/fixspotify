@@ -28,7 +28,7 @@ export default defineConfig(({ mode }) => {
         include: ["**/*.html"],
         values: {
           PLAUSIBLE_SCRIPT: env.PUB_PLAUSIBLE_URL
-            ? `<script defer data-domain="${env.PUB_HOSTNAME ?? "fixspotify.com"}" src="${env.PUB_PLAUSIBLE_URL}/js/script.js"></script>`
+            ? `<script defer data-domain="${env.PUB_HOSTNAME ?? "open.schokolala.cc"}" src="${env.PUB_PLAUSIBLE_URL}/js/script.js"></script>`
             : "",
         },
       }),

@@ -2,7 +2,7 @@ import '../styles/discordEmbed.css'
 import cover from '../assets/images/so-much-to-tell.webp'
 import profile from '../assets/images/profile.webp'
 
-const OPEN_ORIGIN = 'https://open.fixspotify.com'
+const OPEN_ORIGIN = 'https://open.schokolala.cc'
 const demoTrack = {
   id: '2FVTLDhiGL93225Se6nmJQ',
   title: 'so much to tell',

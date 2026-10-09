@@ -5,4 +5,4 @@ got sick of Spotify embeds barely working and decided to do something about it :
 ## How to use
 
 when you want to send an `open.spotify.com` or `spotify.link` link on a social platform, change it to `open.schokolala.cc`. That's it!
-Fork of https://github.com/evastarlight/fixspotify
+Fork of https://github.com/evastarlight/fixspotify aka https://fixspotify.com

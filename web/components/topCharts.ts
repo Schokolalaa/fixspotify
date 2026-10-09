@@ -30,7 +30,7 @@ let range: Range = '7d'
 const formatCount = (n: number) => new Intl.NumberFormat('en-US').format(n)
 
 const itemUrl = (type: Type, id: string) =>
-  id ? `https://open.fixspotify.com/${type}/${id}` : ''
+  id ? `https://open.schokolala.cc/${type}/${id}` : ''
 
 const loaded = new Map<string, Promise<Entry[]>>()
 

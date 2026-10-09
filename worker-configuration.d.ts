@@ -6,8 +6,8 @@ interface __BaseEnv_Env {
 	EMBED_LIMITER: RateLimit;
 	IMAGES: ImagesBinding;
 	ASSETS: Fetcher;
-	MAIN_HOST: "fixspotify.com";
-	OPEN_HOST: "open.fixspotify.com";
+	MAIN_HOST: "schokolala.cc";
+	OPEN_HOST: "open.schokolala.cc";
 	LINK_HOST: "fixspotify.link";
 	STATS_SAMPLE_RATE: "1";
 	SPOTIFY_CLIENT_ID: string;

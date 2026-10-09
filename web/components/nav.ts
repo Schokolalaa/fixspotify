@@ -4,16 +4,16 @@ import fixspotify from '../assets/icons/fixspotify.svg';
 export function initNav() {
   const nav = `
     <nav>
-      <a href="https://fixspotify.com" class="logo">
+      <a href="https://open.schokolala.cc" class="logo">
         <h1>fixSpotify</h1>
         <img src="${fixspotify}" alt="fixSpotify SVG Logo" />
       </a>
       <ul class="nav-menu">
-        <li><a href="https://open.fixspotify.com" class="nav-link">Config</a></li>
-        <li><a href="https://fixspotify.com/stats" class="nav-link">Stats</a></li>
-        <li><a href="https://fixspotify.com/about" class="nav-link">About</a></li>
-        <li><a href="https://github.com/evastarlight/fixspotify" class="nav-link" target="_blank">Source</a></li>
-        <!-- <li><a href="https://ko-fi.com/orcachillin" class="nav-link" target="_blank">Ko-Fi</a></li> -->
+        <li><a href="https://open.schokolala.cc" class="nav-link">Config</a></li>
+        <li><a href="https://open.schokolala.cc/stats" class="nav-link">Stats</a></li>
+        <li><a href="https://open.schokolala.cc/about" class="nav-link">About</a></li>
+        <li><a href="https://github.com/schokolalaa/fixspotify" class="nav-link" target="_blank">Source</a></li>
+        <!-- <li><a href="https://ko-fi.com/orcachillin" class="nav-link" target="_blank">Ko-Fi Of Eva</a></li> -->
         <!-- <li><a href="https://github.com/gurrrrrrett3/fixspotify/graphs/contributors" class="nav-link" target="_blank">Contributors</a></li> -->
       </ul>
       <div class="ticker">
