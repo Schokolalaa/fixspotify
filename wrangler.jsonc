@@ -40,6 +40,7 @@
   "LINK_HOST": "fixspotify.link",  
   "STATS_SAMPLE_RATE": "1"
 },
-"routes": [
-  { "pattern": "open.schokolala.cc", "custom_domain": true }
-]
+  "routes": [
+    { "pattern": "open.schokolala.cc", "custom_domain": true }
+  ]
+}
